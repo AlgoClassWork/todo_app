@@ -1,7 +1,6 @@
 #pip install fastapi uvicorn[standart]
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
-from typing import List
 
 from models import TodoRead
 
@@ -22,7 +21,7 @@ app = FastAPI(title='To Do list', lifespan=lifespan)
 async def hello():
     return {'message': 'Fast Api работает'}
 
-@app.get('/api/todos/', response_model=List(TodoRead), summary='Получить все задачи')
+@app.get('/api/todos/',  summary='Получить все задачи')
 async def get_all_todos():
     return fake_todos_db
 
