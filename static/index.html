@@ -8,9 +8,17 @@
 </head>
 <body>
     <h1>Список дел</h1>
+
+    <form id="add-todo-form">
+        <input type="text" id="todo-title-input" placeholder="Название задачи" required>
+        <input type="text" id="todo-description-input" placeholder="Описание задачи">
+        <button type="submit"> Добавить </button>
+    </form>
     
     <div id="todo-list-container">
+        <h3> Активные: </h2>
         <ul id="active-todo-list"> </ul>
+        <h3> Выполненные: </h2>
         <ul id="completed-todo-list"> </ul>
     </div>
 
