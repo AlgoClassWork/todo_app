@@ -6,3 +6,7 @@ class TodoRead(SQLModel):
     title: str
     description : Optional[str] = None
     done: bool = False
+
+class TodoCreate(SQLModel):
+    title: str
+    description : Optional[str] = None
