@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <h1>Список дел</h1>
+    
     <div id="todo-list-container">
-        Загрузка задач . . .
-        <a href="/api/todos/"> Текущие задачи </a>
+        <ul id="active-todo-list"> </ul>
+        <ul id="completed-todo-list"> </ul>
     </div>
+
+    <script src="/static/script.js"> </script>
 </body>
 </html>
