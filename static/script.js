@@ -21,10 +21,17 @@ async function fetchAndRenderTodos() {
 }
 
 async function addTodoForm(event) {
-    const title = todoTitleInputElement.value
-    alert(title)
-}
+    const title = todoTitleInputElement.value.trim()
+    const description = todoDescriptionInputElement.value.trim()
 
+    const response = await fetch('/api/todos/', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({title, description})
+    })
+
+    fetchAndRenderTodos()
+}
 
 addTodoFormElement.addEventListener('submit', addTodoForm)
 window.onload = fetchAndRenderTodos()
